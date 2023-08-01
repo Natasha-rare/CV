@@ -1,0 +1,212 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[myoption]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar, myoption
+% withoutsidebar
+\usepackage[margin=1cm, a4paper]{geometry}
+\usepackage[russian]{babel}
+\setmainfont{Raleway}
+\usepackage{xcolor}
+\usepackage{fontawesome}
+\usepackage{fancybox}
+\usepackage{lipsum}
+\usepackage{setspace}
+\usepackage{hyperref}
+\newcommand{\mybullet}{{\color{cvgreen} $\bullet$ \hspace{0.4pt}}}
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{My CV}
+\author{\LaTeX{} Nata}
+\date{August 2023}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Natalia}{Avtukhovich}{programmer}{white}
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{1.5em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+% \backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 
+% \backgroundcolor{g}[rgb]{0.8,1,1} %\backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+\footnotesize
+{\setasidefontcolour
+\raggedright
+\setstretch{1.2}
+\begin{center}
+    \roundpic{self.JPEG}
+\end{center}
+
+\bg{cvgreen}{white}{About me}\\[0.5em]
+
+{\footnotesize
+Web developer, aspiring Data Scientist. Second-year student at the National Research University Higher School of Economics. 
+
+Always learning something new and interesting for myself, constantly diving deeper into the professional field. 
+
+Often attend meetups and interact with experienced developers.
+
+I enjoy helping people  and actively participate in the development of the organization I work for.
+Improve processes of work and communication within the team}
+\bigskip
+
+\bg{cvgreen}{white}{Personal} \\[0.5em]
+Natalia Avtukhovich
+
+nationality: Russia 
+
+18 y.o.
+
+\bigskip
+
+\bg{cvgreen}{white}{Areas of specialization} \\[0.5em]
+
+Programming ~•~ Web-design Economics ~•~ Copyright
+
+\bigskip
+
+\bigskip
+
+\bg{cvgreen}{white}{Interests}\\[0.5em]
+Reading technical books and articles
+
+Solving algorithms problems
+
+Watching videos with the newest IT updates
+\bigskip
+
+\infobubble{\faPaperPlane}{cvgreen}{white}{\href{https://t.me/tasha1a}{@tasha1a}}
+\vspace{0.8em}
+\infobubble{\faGithub}{cvgreen}{white}{\href{https://github.com/Natasha-rare}{Natasha-rare}}
+\vspace{0.8em}
+\infobubble{\faEnvelopeO}{cvgreen}{white}{ \href{mailto:natasha_ea5@mail.ru}{natasha\_ea5@mail.ru}}
+\vspace{0.8em}
+\infobubble{\faPhone}{cvgreen}{white} {\href{tel:89772992982}{+7 (977) 299-29-82}}
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Work Experience}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2022-now}{Business in style.RU}{Python developer}{Student organisation}{Backend Python developer.
+    Working with Django, DRF, sometimes React and HTML/CSS. Consulting programmer students. 
+    Working with Linux and remote servers.
+    CEO assistant}{bvsr.jpg} \\
+    \cvevent{2018--2020}{Yandex Lyceum}{Python developer}{Educational course}{Studied Python. First big experience of web-development, teamwork, desktop applications and bots development. Graduated with honors}{lyceum.png}
+\end{tabular}
+\vspace{1.5em}
+
+\begin{minipage}[t]{0.35\textwidth}
+\section*{Education}
+\begin{tabular}{r p{0.6\textwidth} c}
+    \cvdegree{2022-now}{Bachelor}{NRU HSE}{GPA 9.11\color{headerblue}}{Faculty of Economic Sciences }{}{}\\
+    \cvdegree{2016-2022}{School}{Lyceum 1533}{GPA 5.0 \color{headerblue}}{Programming}{}{}
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.35\textwidth}
+
+\section*{Programming}
+\setstretch{1.2}
+\begin{tabular}[align=left, leftmargin=*]{p{1\linewidth} c}
+    {\color{cvgreen} \ovalbox{Python}}
+    Django \mybullet
+    Flask \mybullet 
+    PyQT\\
+    {\color{cvgreen} \ovalbox{DataScience}}
+    PyTorch \mybullet
+    Scikit-learn \mybullet
+    Pandas \mybullet
+    NumPy \mybullet
+    Catboost \mybullet
+    Matplotlib 
+    \\
+    {\color{cvgreen} \ovalbox{Web-development}}
+    HTML \mybullet 
+    CSS \mybullet 
+    JS \mybullet 
+    API \mybullet
+    DRF
+    \\
+    {\color{cvgreen} \ovalbox{Other}}
+    Word \mybullet
+    Excel \mybullet 
+    SQL \mybullet
+    Swift \mybullet
+    C\# \mybullet 
+    Java \mybullet
+    \LaTeX 
+\end{tabular}
+\end{minipage}
+\section*{Projects}
+\begin{tabular}{r| p{0.6\textwidth} c}
+    \cvevent{current}{\href{https://github.com/Natasha-rare/ssl-website}{Soft Skills Lab}}{Python backend developer}{}{DRF project aimed at improving the operation of the student organization "Soft Skills Lab." Creating a comprehensive service for registration for games with the ability to track user skill growth. The project aims to simplify the process of team formation and provide monitoring capabilities for Lab administrators.}{} \\
+    \cvevent{2023}{Whoosh scooters}{FullStack developer}{Hacation}{Development of a website for building three optimal routes for scooter rides. Using the Dirichlet algorithm and machine learning to plan routes considering road conditions, traffic lights, and restrictions.}{} \\
+    \cvevent{2022}{\href{https://github.com/Natasha-rare/covid19-analyser}{Covid-19 Analyser}}{Python developer}{Moscow Programming Olympiad}{A project for COVID-19 detection based on lung images. Developed as an application using PyQT and computer vision technologies with supervised machine learning.}{} \\
+\end{tabular}
+\vspace{1.5em}
+
+\begin{minipage}[t]{0.35\textwidth}
+
+\section*{Languages}
+\begin{tabular}{l | ll}
+\textbf{Russian} & C2 & {\phantom{x}\footnotesize mother tongue} \\
+\textbf{English} & C1 & \pictofraction{\faCircle}{cvgreen}{3}{black!30}{1}{\tiny} \\
+\end{tabular}
+\bigskip
+
+\end{minipage}\hfill
+\begin{minipage}[t]{0.35\textwidth}
+\section*{Publications}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+    2023 & The Youth in Science: Challenges and Prospect  \emph{Economic Dilemma: Money cannot buy happiness} \\
+\end{tabular}
+\bigskip
+
+\end{minipage}
+
+\vspace{3em}
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Avtukhovich Natalia \icon{\faEnvelopeO}{cvgreen}{} \href{mailto:natasha_ea5@mail.ru}{natasha\_ea5@mail.ru}\icon{\faMapMarker}{cvgreen}{} Moscow \icon{\faPhone}{cvgreen}{} \href{tel:89772992982}{+7 (977) 299-29-82} \newline{}
+}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+\end{document}
